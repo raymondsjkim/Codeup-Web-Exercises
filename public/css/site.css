@@ -1,0 +1,20 @@
+.headline {
+	font-size: 64px;
+	font-family: sans-serif;
+}
+
+h1 {
+	font-weight: normal;
+}
+
+.abstract, h1, #article-subhead {
+	/*transform: rotate(180deg);*/
+}
+
+article h1 {
+	color: red;
+}
+
+#article-subhead {
+	background-color: salmon;
+}

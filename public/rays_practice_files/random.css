@@ -1,0 +1,77 @@
+body {
+	background-color: #fffaf0;
+}
+
+.main-head {
+	text-align: center;
+}
+
+.main-head h1 {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: light;
+	font-size: 60px;
+	height: 30px;
+	text-shadow: 4px 4px;
+}
+
+.main-head h4 {
+	font-size: 20px;
+}
+
+ul {
+	color: #FFFAF0;
+	list-style: none;
+	margin: 0 2px;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+}
+
+#headshot {
+	float: left;
+	margin: 0 1.5%;
+	width: 30%;
+
+}
+
+#headshot img {
+	height: 400px;
+	width: 300px;
+	border: 5px solid #000000;
+}
+
+section {
+	margin-left: 310px;
+}
+
+.about-me {
+	width: 800px;
+    padding: 25px;
+}
+
+.about-me h3 {
+	font-family: georgia, serif;
+}
+
+.about-me p {
+	text-indent: 25px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+}
+
+.target-link button {
+
+	font-size: 25px;
+	background-color: ##460000;
+	height: 35px;
+}
+
+
+
+
+

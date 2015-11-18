@@ -1,0 +1,80 @@
+body {
+  background-color: #d8bfd8;
+}
+
+.nav a {
+	color: #5a5a5a;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 14px 10px;
+	text-transform: uppercase;
+  font-family: verdana;
+}
+
+.container li {
+	display: inline;
+}
+
+.container ul {
+	display: inline;s
+}
+
+.jumbotron {
+  background-image:url('http://summerleague.globalbasketball.com/wp-content/uploads/2014/04/New-York-City-Image.jpg');
+  height: 400px;
+}
+
+.jumbotron h1 {
+  color: #FAFAD2;
+  font-size: 50px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.jumbotron blockquote {
+  font-size: 20px;
+  color: #FF8C00;
+  text-align: left;
+}
+
+.jumbotron p {
+  font-size: 30px;
+  color: #FFF;
+  text-align: center;
+}
+
+.learn-more {
+  background-color: #d8bfd8;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+.nav li {
+    display: inline;    
+}
+
+.jumbotron .container {
+    position: relative;
+    top: 100px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
