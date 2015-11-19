@@ -1,0 +1,42 @@
+h1 {
+	font-weight: bolder;
+}
+
+h2 span {
+	background-color: red;
+	text-decoration: line-through;
+}
+
+div {
+	font-size: 25px;
+	font-family: sans-serif;
+	font-weight: light;
+}
+
+#section1 p {
+	text-indent: 80px;
+}
+
+#section2 {
+	text-align: right;
+}
+
+#section2 strong {
+	font-weight: bolder;
+}
+
+#section3 p {
+	text-indent: 80px;
+}
+
+footer a {
+	color: black;
+	font-family: fantasy;
+	font-size: 60px;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
