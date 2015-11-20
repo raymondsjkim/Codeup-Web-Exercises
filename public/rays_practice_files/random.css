@@ -1,10 +1,14 @@
 body {
 	background-color: #fffaf0;
+	background-image: url(http://www.donanimegitim.com/wp-content/themes/donanim/uploads/1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .main-head {
 	text-align: center;
 }
+
 
 .main-head h1 {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -17,9 +21,8 @@ body {
 .main-head h4 {
 	font-size: 20px;
 }
-
+/**/
 ul {
-	color: #FFFAF0;
 	list-style: none;
 	margin: 0 2px;
 	padding: 0;
@@ -27,17 +30,25 @@ ul {
 	justify-content: space-around;
 }
 
+.nav-list a {
+	font-size: 25px;
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 #headshot {
 	float: left;
 	margin: 0 1.5%;
 	width: 30%;
-
 }
 
 #headshot img {
-	height: 400px;
 	width: 300px;
-	border: 5px solid #000000;
+	border-style: groove;
 }
 
 section {
@@ -45,18 +56,30 @@ section {
 }
 
 .about-me {
+	/*background-color: red;*/
 	width: 800px;
-    padding: 25px;
+    /*padding: 25px;*/
+    border-radius: 50px;
+    width: 600px;
+    padding-left: 25px;
+    /*padding-right: 20px;*/
 }
 
 .about-me h3 {
 	font-family: georgia, serif;
+	font-size: 25px;
 }
 
 .about-me p {
-	text-indent: 25px;
+	text-indent: 50px;
 	font-family: "Courier New", Courier, monospace;
 	font-weight: bold;
+	font-size: 20px;
+	margin-right: 50px;
+}
+
+span {
+	
 }
 
 footer {
@@ -65,7 +88,6 @@ footer {
 }
 
 .target-link button {
-
 	font-size: 25px;
 	background-color: ##460000;
 	height: 35px;

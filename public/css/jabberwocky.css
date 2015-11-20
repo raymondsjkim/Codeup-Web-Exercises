@@ -2,7 +2,7 @@ h1 {
 	font-weight: bolder;
 }
 
-h2 span {
+h2 strong {
 	background-color: red;
 	text-decoration: line-through;
 }
@@ -13,7 +13,7 @@ div {
 	font-weight: light;
 }
 
-#section1 p {
+.same-section {
 	text-indent: 80px;
 }
 
@@ -23,10 +23,6 @@ div {
 
 #section2 strong {
 	font-weight: bolder;
-}
-
-#section3 p {
-	text-indent: 80px;
 }
 
 footer a {
@@ -39,4 +35,13 @@ footer a {
 a:hover {
 	text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
 
