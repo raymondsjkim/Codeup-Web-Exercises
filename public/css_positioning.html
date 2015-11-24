@@ -1,47 +1,178 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Position Exercise</title>
+	<title>Box Model Exercise</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/box_model.css">
+	<style type="text/css">
+	/*Box-sizing*/
+		html {
+    		box-sizing: border-box;
+		}
+		*, *:before, *:after {
+    		box-sizing: inherit;
+		}
+	/*This is where the styling begins*/
+		p {
+			border: 1px solid black;
+			width: 75px;
+			height: 70px;
+			padding: 10px;
+			color: white;
+			font-weight: bold;
+			margin-top: 10px;
+			box-sizing: border-box;
+		}
+
+		.red {
+			background-color: #d84231;
+		}
+
+		.orange {
+			background-color: #eaae33;
+		}
+
+		.yellow {
+			background-color: #ffff00;
+		}
+
+		.green {
+			background-color: #578c05;
+		}
+
+		.blue {
+			background-color: #234afb;
+		}
+
+		.purple {
+			background-color: #DF8BF0;
+		}
+
+	/*This is where the positing begins*/
+		#container {
+			/*border: 1px solid black;*/
+			/*background-color: khaki;*/
+			width: 600px;
+			height: 400px;
+			position: relative;
+		}
+
+		h1 {
+			position: absolute;
+		}
+
+		.box1 {
+			float: left;
+			position: absolute;
+			top: 50px;
+		}
+
+		.box1 img {
+			position: relative;
+			left: 55px;
+			top: 20px;
+		}
+
+		.box2 {
+			position: absolute;
+			top: 50px;
+			left: 125px;
+		}
+
+		.box2 img {
+			position: relative;
+			left: 55px;
+			top: 20px;
+		}
+
+		.box3 {
+			position: absolute;
+			top: 50px;
+			left: 250px;
+		}
+
+		.box3 img {
+			position: relative;
+			left: 55px;
+			top: 20px;
+		}
+
+		.box4 {
+			position: absolute;
+			top: 180px;
+			float: left;
+		}
+
+		.box4 img {
+			position: relative;
+			left: 55px;
+			top: 20px;
+		}
+
+		.box5 {
+			position: absolute;
+			left: 125px;
+			top: 180px;
+		}
+
+		.box5 img {
+			position: relative;
+			left: 55px;
+			top: 20px;
+		}
+
+		.box6 {
+			position: absolute;
+			left: 250px;
+			top: 180px;
+		}
+
+		.box6 img {
+			position: relative;
+			left: 55px;
+			top: 20px;
+		}
+
+	</style>
 </head>
 
 <body>
-	<h1><a href="https://en.wikipedia.org/wiki/Wavelength" target="_blank">Visible Spectrum Wavelengths</a></h1>
+	<!-- <h1><a href="https://en.wikipedia.org/wiki/Wavelength" target="_blank">Visible Spectrum Wavelengths</a></h1> -->
+	
 
-<div id="top">
-	<section id="container" class="floats1">
-		<img src="img/codeup-arrow.png">
-		<div id="red">620-750 nm</div>	
-	</section>
-	
-	<section id="container" class="floats2">
-		<img src="img/codeup-arrow.png">
-		<div id="orange">590-620 nm</div>
-	</section>
-	
-	<section id="container" class="floats3">
-		<img src="img/codeup-arrow.png">
-		<div id="yellow">570-590 nm</div>
-	</section>
-</div>
-<div id="bottom">
-	<section id="container" class="floats4">
-		<img src="img/codeup-arrow.png">
-		<div id="green">495-570 nm</div>
-	</section>
-	
-	<section id="container" class="floats5">
-		<img src="img/codeup-arrow.png">
-		<div id="blue">450-495 nm</div>
-	</section>
-	
-	<section id="container" class="floats6">
-		<img src="img/codeup-arrow.png">
-		<div id="purple">380-450 nm</div>
-	</section>
-</div>
+	<div id="container">
+		
+		<h1><a href="https://en.wikipedia.org/wiki/Wavelength" target="_blank">Visible Spectrum Wavelengths</a></h1>
 
 
+		<div class="box1">
+			<img src="img/codeup-arrow.png">
+			<p class="red">620-750 nm</p>	
+		</div>
+		
+		<div class="box2">
+			<img src="img/codeup-arrow.png">
+			<p class="orange">590-620 nm</p>
+		</div>
+		
+		<div class="box3">
+			<img src="img/codeup-arrow.png">
+			<p class="yellow">570-590 nm</p>
+		</div>
+		
+		<div class="box4">
+			<img src="img/codeup-arrow.png">
+			<p class="green">495-570 nm</p>
+		</div>
+		
+		<div class="box5">
+			<img src="img/codeup-arrow.png">
+			<p class="blue">450-495 nm</p>
+		</div>
+		
+		<div class="box6">
+			<img src="img/codeup-arrow.png">
+			<p class="purple">380-450 nm</p>
+		</div>
+	</div>
 </body>
 </html>
