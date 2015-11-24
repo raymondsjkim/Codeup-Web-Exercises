@@ -1,27 +1,25 @@
 body {
 	background-color: #fffaf0;
-	background-image: url(http://www.donanimegitim.com/wp-content/themes/donanim/uploads/1.jpg);
+	background-image: url(http://cdn.shopify.com/s/files/1/0597/4301/products/Good_Vibes_grande.jpg?v=1436506252);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
-.main-head {
+header {
 	text-align: center;
 }
-
 
 .main-head h1 {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: light;
 	font-size: 60px;
-	height: 30px;
 	text-shadow: 4px 4px;
 }
 
 .main-head h4 {
 	font-size: 20px;
 }
-/**/
+
 ul {
 	list-style: none;
 	margin: 0 2px;
@@ -52,17 +50,13 @@ a:hover {
 }
 
 section {
-	margin-left: 310px;
+	margin-left: 410px;
 }
 
 .about-me {
-	/*background-color: red;*/
-	width: 800px;
-    /*padding: 25px;*/
-    border-radius: 50px;
-    width: 600px;
-    padding-left: 25px;
-    /*padding-right: 20px;*/
+	background-color: red;
+	width: 660px;
+    margin-left: 320px;
 }
 
 .about-me h3 {
@@ -75,11 +69,8 @@ section {
 	font-family: "Courier New", Courier, monospace;
 	font-weight: bold;
 	font-size: 20px;
-	margin-right: 50px;
-}
-
-span {
-	
+	padding-left: 80px;
+	/*padding-right: 80px;*/
 }
 
 footer {
