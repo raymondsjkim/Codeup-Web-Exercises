@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Box Model Exercise</title>
+	<title>Positioning Exercise</title>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
 	<style type="text/css">
 	/*Box-sizing*/
 		html {
@@ -14,13 +16,15 @@
 	/*This is where the styling begins*/
 		p {
 			border: 1px solid black;
-			width: 75px;
-			height: 70px;
+			width: 52px;
+			height: 50px;
 			padding: 10px;
-			color: white;
-			font-weight: bold;
+			color: black;
+			font-size: 40px;
+			text-align: center;
+			/*font-weight: bold;*/
 			margin-top: 10px;
-			box-sizing: border-box;
+			box-sizing: content-box;
 		}
 
 		.red {
@@ -47,7 +51,7 @@
 			background-color: #DF8BF0;
 		}
 
-	/*This is where the positing begins*/
+	/*This is where the positioning begins*/
 		#container {
 			/*border: 1px solid black;*/
 			/*background-color: khaki;*/
@@ -56,9 +60,7 @@
 			position: relative;
 		}
 
-		h1 {
-			position: absolute;
-		}
+
 
 		.box1 {
 			float: left;
@@ -132,47 +134,59 @@
 			top: 20px;
 		}
 
+		h1 {
+			font-family: "paytone one";
+		}
+
+		.fa-sun-o {
+			color: red;
+		}
+
+		.name:nth-child(even) {
+			/*top: 50px;*/
+		}
+
+
 	</style>
 </head>
 
 <body>
-	<!-- <h1><a href="https://en.wikipedia.org/wiki/Wavelength" target="_blank">Visible Spectrum Wavelengths</a></h1> -->
-	
-
+	<i class="fa fa-sun-o">Light_</i>
 	<div id="container">
 		
 		<h1><a href="https://en.wikipedia.org/wiki/Wavelength" target="_blank">Visible Spectrum Wavelengths</a></h1>
 
-
-		<div class="box1">
+		<div id="selector">
+		<div class="box1 name">
 			<img src="img/codeup-arrow.png">
-			<p class="red">620-750 nm</p>	
+			<p class="red"><i class="fa fa-reddit-alien"></i></p>	
 		</div>
 		
-		<div class="box2">
+		<div class="box2 name">
 			<img src="img/codeup-arrow.png">
-			<p class="orange">590-620 nm</p>
+			<p class="orange"><i class="fa fa-university"></i></p>
 		</div>
 		
-		<div class="box3">
+		<div class="box3 name">
 			<img src="img/codeup-arrow.png">
-			<p class="yellow">570-590 nm</p>
+			<p class="yellow"><i class="fa fa-beer"></i></p>
 		</div>
 		
-		<div class="box4">
+		<div class="box4 name">
 			<img src="img/codeup-arrow.png">
-			<p class="green">495-570 nm</p>
+			<p class="green"><i class="fa fa-bed"></i></p>
 		</div>
 		
-		<div class="box5">
+		<div class="box5 name">
 			<img src="img/codeup-arrow.png">
-			<p class="blue">450-495 nm</p>
+			<p class="blue"><i class="fa fa-bomb"></i></p>
 		</div>
 		
-		<div class="box6">
+		<div class="box6 name">
 			<img src="img/codeup-arrow.png">
-			<p class="purple">380-450 nm</p>
+			<p class="purple"><i class="fa fa-tree"></i></p>
 		</div>
+	</div>
 	</div>
 </body>
 </html>
