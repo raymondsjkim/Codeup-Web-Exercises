@@ -1,57 +1,12 @@
-body {
-	background-color: black;
-	background-image: url(https://farm4.staticflickr.com/3209/2925279441_cfd92c70fc_o_d.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-}
 
-#main-head img {
-	width: 50px;
-	padding: 5px;
-	text-align: left;
-	float: left;
-	border: 1px solid #F3F3F3;
 
-}
 
-#main-head h1 {
-	font-weight: bolder;
+
+
+
+
+
+.fa-beer {
 	font-size: 64px;
-	text-align: center;
-	color: white;
-	/*font-family: cursive;*/
-	text-shadow: 1px 1px 2px black, 0 0 25px #F3F3F3, 0 0 5px #A3567A;
+	color: red;
 }
-
-		/*Middle half*/
-
-.center-image {
-	text-align: center;
-}
-
-footer {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	text-align: center;
-	color: white;
-	text-shadow: 1px 1px 2px black, 0 0 25px #F3F3F3, 0 0 5px #A3567A;
-	font-size: 50px;
-	/*text-decoration: none;*/
-}
-
-.bottom-text a {
-	text-decoration: none;
-	color: white;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-
-
-
-
-
-
-
