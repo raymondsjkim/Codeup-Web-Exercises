@@ -1,0 +1,117 @@
+	/*		    *\
+  	  Box-sizing
+	\*		    */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+	/*		   *\
+  	  Container
+	\*		   */
+.container {
+	border: 10px solid black;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+	/*	   *\
+  	   Row
+	\*	   */
+.row {
+	border: 7px solid red;
+    width:100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+	/*		*\
+  	  Column
+	\*		*/
+.column {
+	border: 4px solid green;
+	float: left;
+	padding: 10px;
+}
+
+/*Width size of each column*/
+.column.one-third {
+	width: 33.33%;
+}
+
+.column.one-half {
+	width: 50%;
+}
+
+.column.one-fourth {
+	width: 50%;
+}
+
+.column.one-sixth {
+	width: 33.33%;
+}
+
+.column.one-eighth {
+	width: 50%;
+}
+
+/*added another class to adjust the width*/
+.column.one-sixth.change {
+	width: 16.67%
+}
+
+.column.two-third {
+	width: 20%;
+}
+
+.column.three-eighth {
+	width: 33.33%;
+}
+
+.column.two-fourth {
+	width: 25%;
+}
+
+.column.three-sixth {
+	width: 11.11%
+}
+
+/* Offset */
+.column.one-half.offset-one-half {
+	margin: 25px;
+}
+
+.column.one-third.offset-one-third {
+	margin: 30px;
+}
+
+/**
+  *Style header with an image.
+  *Style nav-bar using <a> tags.
+**/
+.main-head h1 {
+	font-family: 'IM Fell French Canon';
+	float: left;
+}
+
+.main-head img {
+	width: 100px;
+	border-radius: 150px;
+	float: right;
+}
+
+.nav-bar {
+	text-align: center;
+}
+.nav-bar a {
+	text-decoration: none;
+}
+
+
