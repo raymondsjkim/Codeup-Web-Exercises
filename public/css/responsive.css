@@ -1,0 +1,65 @@
+body {
+	width: 100%;
+	height: auto;
+	font-size: 14px
+	/*border: 1px solid black;*/
+}
+
+h6 {
+	font-size: 2rem;
+	margin-top: 0%;
+	margin-bottom: -1%;
+	margin-left: 1%;
+}
+
+.box {
+	width: 80%;
+	padding: 40px;
+	border: 1px solid black;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.red {
+	background-color: red;
+}
+
+.khaki {
+	background-color: khaki;
+}
+
+.salmon {
+	background-color: salmon;
+}
+
+/*If screen is less than 550px in width*/
+@media screen and (max-width: 550px) {
+	.box {
+		width: 80%;
+		margin: 1rem;
+	}
+}
+
+/*If the screen is greater than 550px in width*/
+@media screen and (min-width: 550px) {
+	.box {
+		width: 30%;
+		margin: .5rem;
+		float: left;
+	}
+}
+
+/*If the screen is greater than 800px in width*/
+@media screen and (min-width: 800px) {
+	.box {
+		width: 25%;
+		margin: 1rem;
+		float: left;
+	}
+}
