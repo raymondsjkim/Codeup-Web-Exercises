@@ -63,15 +63,16 @@ body {
 .contact-info img {
 	border-radius: 150px;
 	width: 100px;
-	float: left;
+	float: right;
 }
 
 .column.speech {
-	width: 50%;
+	width: 60%;
 }
 .column.aside {
 	width: 25%;
 	float: right;
+	margin-right: 10%;
 }
 
 /*Footer*/
