@@ -1,0 +1,148 @@
+h4,
+h3,
+h2 {
+	color: #0B6997;
+}
+
+span {
+	font-size: 1rem;
+	position: relative;
+	bottom: 5px;
+}
+
+.usaa-symbol {
+	position: absolute;
+	top: 2%;
+}
+
+.btn {
+	font-size: 1.2rem;
+}
+
+/*
+
+	NAV 
+
+*/
+.nav-master {
+	padding-top: 0.5%;
+	/*padding-bottom: 5%;*/
+	background-color: #EEEDF2;
+	position: fixed;
+	/*left: 80%;*/
+	/*font-size: 1rem;*/
+}
+.nav-master ul {
+	list-style: none;
+}
+.nav-master h4 {
+	padding-top: 0.5%;
+	/*padding-bottom: 5%;*/
+	position: relative;
+	top: -10px;
+}
+.nav-master h5 {
+	position: relative;
+	top: -10px;
+	/*background-color: green;*/
+}
+.nav-master li {
+	/*padding-bottom: 5%;*/
+	position: relative;
+	top: -20px;
+	/*background-color: khaki;*/
+}
+.nav-master i {
+	position: relative;
+	left: 42%;
+	color: gold;
+	font-size: 2rem;
+}
+h5.position {
+	position: relative;
+	top: -20px;
+}
+li.up-list {
+	position: relative;
+	top: -25px;
+}
+
+@media (max-width: 1200px) {
+  .container-fluid {
+    display: none;
+  }
+}
+/*
+
+	Header
+	
+*/
+.container {
+	width: 80%;
+	float: right;
+	padding-bottom: 10%;
+}
+.master-title {
+	/*z-index: 1;*/
+	padding-top: 2%;
+	margin: 0 auto;
+	width: 75%;
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/*
+
+	Style the gold bar
+
+*/
+.yoda-line {
+	padding-top: 3%;
+}
+.gold-right {
+	border: 2px solid gold;
+	width: 25%;
+	float: left;
+	margin-left: 22%;
+}
+.gold-middle {
+ 	 color: gold;
+ 	 font-size: 3rem;
+ 	 float: left;
+ 	 /*border: 2px solid gold;*/
+ 	 margin-left: 1%;
+ 	 margin-right: 1%;
+ 	 position: relative;
+ 	 bottom: 2rem;
+}
+.gold-left {
+	border: 2px solid gold;
+	width: 25%;
+	float: left;
+}
+
+.first-row {
+	padding-top: 5%;
+}
+
+/*
+
+	Footer
+
+*/
+.master-foot {
+	padding-top: 5%;
+	padding-bottom: 3%;
+}
+
+.final-row {
+	margin-left: 0 auto;
+	width: 50%;
+	position: relative;
+	left: 25%;
+	font-size: 1.3rem;
+}
+
