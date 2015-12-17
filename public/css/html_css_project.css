@@ -26,31 +26,24 @@ span {
 */
 .nav-master {
 	padding-top: 0.5%;
-	/*padding-bottom: 5%;*/
 	background-color: #EEEDF2;
 	position: fixed;
-	/*left: 80%;*/
-	/*font-size: 1rem;*/
 }
 .nav-master ul {
 	list-style: none;
 }
 .nav-master h4 {
 	padding-top: 0.5%;
-	/*padding-bottom: 5%;*/
 	position: relative;
 	top: -10px;
 }
 .nav-master h5 {
 	position: relative;
 	top: -10px;
-	/*background-color: green;*/
 }
 .nav-master li {
-	/*padding-bottom: 5%;*/
 	position: relative;
 	top: -20px;
-	/*background-color: khaki;*/
 }
 .nav-master i {
 	position: relative;
@@ -83,7 +76,6 @@ li.up-list {
 	padding-bottom: 10%;
 }
 .master-title {
-	/*z-index: 1;*/
 	padding-top: 2%;
 	margin: 0 auto;
 	width: 75%;
@@ -112,7 +104,6 @@ li.up-list {
  	 color: gold;
  	 font-size: 3rem;
  	 float: left;
- 	 /*border: 2px solid gold;*/
  	 margin-left: 1%;
  	 margin-right: 1%;
  	 position: relative;
