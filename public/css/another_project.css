@@ -1,0 +1,316 @@
+html {
+	font-size: 14px;
+}
+
+.container {
+	width: 100%;
+}
+.nav img {
+	position: relative;
+	left: 55%;
+}
+/*
+
+	Nav Bar
+
+*/
+.nav {
+	position: relative;
+	bottom: 100px;
+}
+/* Hide nav when screen width is < 992px */
+@media (max-width: 992px) {
+	.nav {
+		display: none;
+	}
+}
+/* 
+
+	First Row
+
+*/
+.greeting {
+	padding-top: 10%;
+	padding-bottom: 10%;
+	padding-left: 2%;
+	padding-right: 2%;
+	background-color: #112940;
+}
+.thanks-title {
+	padding-top: 4%;
+	text-align: right;
+	padding-right: 5%;
+}
+.thanks-title h1 {
+	font-family: serif;
+	color: #FAC705;
+}
+.text-right p {
+	color: white;
+	text-align: left;
+}
+.text-right a {
+	color: white;
+}
+p.big {
+	line-height: 200%;
+	font-size: 1.5rem;
+}
+/*
+
+	Second Row
+
+*/
+.manager-img img {
+	position: relative;
+	right: 2.5%;
+	width: 100%;
+}
+.manager-info {
+	position: relative;
+	right: 1.5%;
+}
+.gbar-left {
+	border: 1px solid gold;
+	width: 25%;
+	float: left;
+	position: relative;
+	top: 18px;
+	right: 10px;
+}
+.gbar-right {
+	border: 1px solid gold;
+	width: 25%;
+	float: left;
+	position: relative;
+	top: 18px;
+	left: 10px;
+}
+.round-me {
+	color: white;
+	font-size: .8rem;
+	background-color: #112940;
+	display: inline-block;
+	padding: 2%;
+	padding-right: 3%;
+	padding-left: 3%;
+	border-radius: 50%;
+	float: left;
+}
+.padd-top {
+	padding-top: 2%;
+	position: relative;
+	left: 20%;
+}
+.manager-info h2 {
+	clear: both;
+	font-family: serif;
+}
+.money-text {
+	width: 75%;
+	position: relative;
+	left: 15%;
+	font-size: 1rem;
+}
+
+.manager-info li {
+	line-height: 190%;
+	width: 75%;
+	position: relative;
+	left: 10%;
+}
+.money-link {
+	position: relative;
+	left: 14%;
+
+}
+.fa-angle-double-right {
+	float: left;
+}
+.money-link a {
+	float: left;
+	position: relative;
+	left: 5px;
+}
+.money-link i {
+	font-size: 1.5rem;
+	color: #FAC705;
+}
+/*
+
+	Third Row
+
+*/
+.free-info {
+	position: relative;
+	left: 1.5%;
+}
+.free-top {
+	padding-top: 2%;
+	position: relative;
+	left: 18%;
+}
+.free-img img {
+	position: relative;
+	left: 2.5%;
+}
+.gtbar-left {
+	border: 1px solid gold;
+	width: 25%;
+	float: left;
+	position: relative;
+	top: 18px;
+	right: 10px;
+}
+.roundtwo-me {
+	color: white;
+	font-size: .8rem;
+	background-color: #112940;
+	display: inline-block;
+	padding: 2%;
+	padding-right: 3%;
+	padding-left: 3%;
+	border-radius: 50%;
+	float: left;
+}
+.gtbar-right {
+	border: 1px solid gold;
+	width: 25%;
+	float: left;
+	position: relative;
+	top: 18px;
+	left: 10px;
+}
+
+.free-info h2 {
+	clear: both;
+	font-family: serif;
+	width: 50%;
+	position: relative;
+	left: 15%;
+	text-align: left;
+}
+.free-text {
+	width: 75%;
+	position: relative;
+	left: 15%;
+}
+.free-link {
+	position: relative;
+	left: 14%;	
+}
+.free-link a {
+	float: left;
+	position: relative;
+	left: 5px;
+}
+.free-link i {
+	font-size: 1.5rem;
+	color: #FAC705;
+}
+/*
+
+	Fourth Row
+
+*/
+.retire-img {
+	position: relative;
+	right: 2.5%;
+}
+.retire-top {
+	padding-top: 2%;
+	position: relative;
+	left: 18%;	
+}
+.gthbar-left {
+	border: 1px solid gold;
+	width: 25%;
+	float: left;
+	position: relative;
+	top: 18px;
+	right: 10px;
+}
+.roundth-me {
+	color: white;
+	font-size: .8rem;
+	background-color: #112940;
+	display: inline-block;
+	padding: 2%;
+	padding-right: 3%;
+	padding-left: 3%;
+	border-radius: 50%;
+	float: left;
+}
+.gthbar-right {
+	border: 1px solid gold;
+	width: 25%;
+	float: left;
+	position: relative;
+	top: 18px;
+	left: 10px;
+}
+.retire-info h2 {
+	clear: both;
+	font-family: serif;
+	text-align: left;
+	position: relative;
+	left: 15%;
+}
+.retire-text {
+	width: 75%;
+	position: relative;
+	left: 15%;
+	font-size: 1rem;
+}
+.retire-link {
+	position: relative;
+	left: 14%;	
+}
+.retire-link a {
+	float: left;
+	position: relative;
+	left: 5px;
+}
+.retire-link i {
+	font-size: 1.5rem;
+	color: #FAC705;
+}
+.retire-info img {
+	position: relative;
+	right: 30px;
+}
+/*
+
+	Footer
+
+*/
+.main-footer {
+	padding-top: 7%;
+	padding-bottom: 7%;
+	background-color: #112940;
+}
+.foot {
+	width: 60%;
+	position: relative;
+	left: 25%;
+}
+.foot h3 {
+	color: white;
+}
+.foot p {
+	color: white;
+	padding-bottom: 3%;
+	font-size: 1.3rem;
+}
+.foot span {
+	color: #FAC705;
+	font-weight: bolder;
+	font-size: 1.3rem;
+	line-height: 200%;
+}
+.foot a {
+	color: #FAC705;
+}
+
+
+
