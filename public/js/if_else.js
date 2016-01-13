@@ -7,15 +7,15 @@ var favorite = 'blue'; // TODO: change this to your favorite color from the list
 
 // TODO: Create a block of if/else statements to check for every color except indigo and violet.
 
-if(color=='red') {
+if(color==='red') {
 	console.log('red');
-} else if(color=='orange') {
+} else if(color==='orange') {
 	console.log('orange');
-} else if(color=='yellow') {
+} else if(color==='yellow') {
 	console.log('yellow');
-} else if(color=='green') {
+} else if(color==='green') {
 	console.log('green');
-} else if(color=='blue') {
+} else if(color==='blue') {
 	console.log('blue');
 } else {
 	console.log('indigo and violet');
