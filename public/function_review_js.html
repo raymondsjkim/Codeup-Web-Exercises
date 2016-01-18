@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>More Review</title>
+</head>
+<body>
+	<script>
+	"use strict";
+
+
+	// Change string to an uppercase:
+	(function () {
+	
+	var bigLetter = "hey I\'m uppercase!"
+	
+	function upperCase() {
+		console.log(bigLetter.toUpperCase());
+		return bigLetter;
+	}
+	
+	upperCase();
+	
+	})();
+
+	
+	
+	// Concatanate three words:
+	(function () {
+
+	function threeWords(a, b, c) {
+		console.log(a + b + c);
+		return;
+	}
+
+	threeWords("Hey ", "you ", "there! ");
+	
+	})();
+
+	
+	// Farenheit to celcius:
+	(function () {
+
+	function degrees(f) {
+		console.log(Math.round(((f - 32) / 1.8)*100) / 100 + " Celcius");
+		return;
+	}
+
+	degrees(9);
+
+	})();
+
+	
+	// lbs to kg:
+	(function () {
+	
+	function kiloGrams(lbs) {
+		console.log(Math.round((lbs / 2.20462)*100) / 100 + " kg");
+		return;
+	}
+
+	kiloGrams(10);
+	
+	})();
+
+
+	// Make sure a string is between 5 and 10 character // long:
+
+	(function () {
+		
+	function textLength(between) {
+		
+	var thisWord = between.length;
+
+		if ((thisWord > 5) && (thisWord < 10)) {
+			console.log(true);
+		} else {
+			console.log(false);
+		}
+		return between;
+	}
+
+	textLength("independe");
+
+	})();
+
+
+	// Determine if a given letter is a vowel:
+	(function () {
+
+	var response = prompt("Is this letter a vowel?");
+
+	function isVowel() {
+		if (response === "a" || response === "e" || response === "i" 
+			|| response === "o" || response === "u") {
+			confirm("Correct. That is a vowel!");
+			return isVowel;
+		} else {
+			confirm("Incorrect. Not a vowel...");
+			return isVowel;
+		}
+	}
+
+	isVowel();
+	
+	})();
+
+
+	// document.write("Some String"); :
+	document.write("Practice practice PRACTICE!");
+
+
+
+	</script>
+</body>
+</html>

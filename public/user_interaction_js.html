@@ -10,16 +10,22 @@
 //       Keep asking if an empty input is provided.
 // todo: Show an alert message that welcomes the user based on their input.
 
-
 var askYourName = prompt("What is your name?");
 
-	if(askYourName.length > 0) {
-		alert("Welcome " + askYourName + "!");
-	} else {
-		for (var i = 1; i < 10; i++) {
-			prompt("What is your name?");
+	// if(askYourName.length > 0) {
+	// 	alert("Welcome " + askYourName + "!");
+	// } else {
+	// 	for (var i = 1; i < 10; i++) {
+	// 		prompt("What is your name?");
+	// 	} 
+	// }
+
+	do {
+		if(askYourName == "") {
+			askYourName = prompt("Oops, What is your name?");
 		} 
-	}
+	} while (askYourName == "");
+		alert("Welcome " + askYourName + "!")
 
 // todo: Ask the user if they like pizza.
 //       Based on their answer show a creative alert message.
@@ -31,11 +37,6 @@ var userLikePizza = prompt("Do you like pizza " + askYourName + "?");
 	} else {
 		confirm("Well that\'s lame....");
 	}
-
-
-
-
-
 
 	</script>
 </body>
