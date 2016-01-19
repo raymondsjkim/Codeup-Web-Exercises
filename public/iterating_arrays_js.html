@@ -12,13 +12,28 @@
 
 	var names = ["Homer", "Marge", "Bart", "Lisa"];
 
-// todo:
-// Create a log statement that will log the number of elements in the names array.
+// Use the for loop to log each element.
+	
+	for (var i = 0; i < names.length; i++) {
+		console.log(names[i] + " is at index " + i);
+	}
 
-	console.log("This array has " + names.length + " values.");
+// Use the forEach loop to print each element. 
+	// (The parameters can have any names you want but the order matters.)
+	names.forEach(function (element, index, array) {
+	// (element is the name) - always used but you can 	leave it out
+    // (index is the iterator) - used sometimes.
+    // (array is the name array itself.) - rarely used.
+		console.log("Index " + index + " is where " +element + " is.");
+	});
 
-// todo:
-// Create log statements that will print each of the names array elements individually.
+// // todo:
+// // Create a log statement that will log the number of elements in the names array.
+
+	console.log("This array has " + names.length + " names in it.");
+
+// // todo:
+// // Create log statements that will print each of the names array elements individually.
 
 	console.log(names[0] + " is in this array.");
 	console.log(names[1] + " is in this array.");
