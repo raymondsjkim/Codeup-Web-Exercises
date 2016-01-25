@@ -30,67 +30,79 @@
 
 (function() {
 	"use strict";
-
 	// Set our map options
     var mapOptions = {
         // Set the zoom level
-    	zoom: 19,
-
+    	zoom: 11,
     // This sets the center of the map at our location
        	center: {
             lat: 34.0467500,
             lng: -118.2821389
          },
-		mapTypeId: google.maps.MapTypeId.HYBRID
+		mapTypeId: google.maps.MapTypeId.ROADMAP
      };
-
     // Render the map
 	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-  	// This will set our address to geocode
-  	var address = "2020 W Pico Blvd Los Angeles, CA 90006";
+
+	var restaurants = { 
+		"restaurantList":[
+			{
+				"restName": "King Taco",
+				"restAddress": "2020 W Pico Blvd Los Angeles, CA 90006",
+				"restInfo": "<div><h1>King Taco</h1><p>Founded in 1974, King Taco began its operation from a converted ice cream truck. The Mexican fast food favorite has since expanded to 20 popular locations throughout Los Angeles County. We service a wide variety of authentic Mexican foods, King Taco has been recognized by prominent food critics and has also placed within the top 100 of Hispanic Business Magazine’s “Top 500 Hispanic Businesses.”</p><p>Mexican food lovers attribute King Taco’s success to its use of fresh ingredients and consistent quality.</p></div>"
+			},
+			{
+				"restName": "Quarters Korean BBQ",
+				"restAddress": "3465 W 6th St C-130 Los Angeles, CA 90020 Koreatown, Wilshire Center",
+				"restInfo": "<div><h1>Quarters Korean BBQ</h1><p>Located in the Chapman Plaza in Korea Town, Los Angeles. Great for drinks and ofcourse quality meat.</p></div>"
+			},
+			{
+				"restName": "Din Tai Fung",
+				"restAddress": "177 Caruso Ave Glendale, CA 91210",
+				"restInfo": "<div><h1>Din Tai Fung</h1><p>Din Tai Fung was founded in Taipei, Taiwan in 1958 as a cooking oil retail shop. In 1972, it transitioned into a full fledged restaurant specializing in soup dumplings and noodles. The restaurant was soon winning rave reviews from all over the world. The tradition of Din Tai Fung continues today in its locations in the United States, Taiwan, Japan, Singapore, South Korea, Australia, Indonesia, Malaysia, China, and Thailand.</p></div>"
+			}
+		]
+	}
+
+
+	restaurants.restaurantList.forEach(function (diners) {
+		// This will set our address to geocode
+  		var addresses = diners.restAddress;
   
-  	// Init geocoder object
-  	var geocoder = new google.maps.Geocoder();
+  		// Init geocoder object
+  		var geocoder = new google.maps.Geocoder();
   
-  	// Geocode our address
-  	geocoder.geocode({ "address": address }, function(results, status) {
+  		// Geocode our address
+  		geocoder.geocode({ "address": addresses }, function(results, status) {
 		
-		// Check for a successful result
-   		if (status == google.maps.GeocoderStatus.OK) {
-   		// Recenter the map over the address
-       		map.setCenter(results[0].geometry.location);
-
-       		// Add the marker to our existing map
-			var marker = new google.maps.Marker({
-    			position: results[0].geometry.location,
-    			animation: google.maps.Animation.DROP,
-    			map: map
-			});
-
-			// Create a new infoWindow object with content
-			var contentString = '<div id="content">'+
-      		'<div id="siteNotice">'+
-      		'</div>'+
-      		'<h1 id="firstHeading" class="firstHeading">King Taco</h1>'+
-      		'<div id="bodyContent">'+
-      		'<p>Founded in 1974, King Taco began its operation from a converted ice cream truck. The Mexican fast food favorite has since expanded to 20 popular locations throughout Los Angeles County. We service a wide variety of authentic Mexican foods, King Taco has been recognized by prominent food critics and has also placed within the top 100 of Hispanic Business Magazine’s “Top 500 Hispanic Businesses.”</p>'+'<p>Mexican food lovers attribute King Taco’s success to its use of fresh ingredients and consistent quality.</p>'+'</div>'+'</div>';
-
-			var infowindow = new google.maps.InfoWindow({
-    			content: contentString
-			});
-
-			// Open the window using our map and marker
-			marker.addListener("click", function() {
-				infowindow.open(map, marker);
-			});
+			// Check for a successful result
+   			if (status == google.maps.GeocoderStatus.OK) {
+   				// Recenter the map over the address
+       			map.setCenter(results[0].geometry.location);
+       			// Add the marker to our existing map
+				var marker = new google.maps.Marker({
+    				position: results[0].geometry.location,
+    				animation: google.maps.Animation.DROP,
+    				map: map
+				});
+				// Create a new infoWindow object with content
+				var contentString = diners.restInfo;
+			
+				var infowindow = new google.maps.InfoWindow({
+    				content: contentString
+				});
+				// Open the window using our map and marker
+				marker.addListener("click", function() {
+					infowindow.open(map, marker);
+				});
 		
-		} else {
-		// Show an error message with the status if our request fails
-       		alert("Geocoding was not successful - STATUS: " + status);
-   		}
+			} else {
+				// Show an error message with the status if our request fails
+       			alert("Geocoding was not successful - STATUS: " + status);
+   			}
+		});
 	});
-
 })();
 
 </script>
