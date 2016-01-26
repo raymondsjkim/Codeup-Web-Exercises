@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>JQuery</title>
+
+</head>
+<body>
+
+	<div id="first-sec">
+		<h1 class="codeup">JQuery Practice</h1>
+			<p>Learning Selectors</p>
+				<ul>
+					<li>ID</li>
+					<li>Class</li>
+					<li>Elements</li>
+				</ul>
+	</div>
+	<div id="second-sec">
+		<h1 class="codeup">More Practice</h1>
+			<p class="codeup">Another paragraph</p>
+	</div>
+
+
+
+	<script src="/js/jquery.js"></script>
+
+	<script type="text/javascript">
+	"use strict";
+
+		$(document).ready(function() {
+			alert("The DOM has finished loading!");
+
+			var contents = $("#second-sec").html();
+				alert(contents);
+
+			$(".codeup").css("border", "1px solid red");
+
+			$("li").css("font-size", "20px");
+
+			$("h1, p, li").css("background-color", "yellow");
+
+			var titleContent = $("h1").html();
+				alert(titleContent);
+
+		});
+
+	</script>
+
+
+</body>
+</html> 
