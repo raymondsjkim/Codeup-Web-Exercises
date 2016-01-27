@@ -21,32 +21,35 @@
 			<p class="codeup">Another paragraph</p>
 	</div>
 
-
-
+	<!-- Use script bottom of the body -->
 	<script src="/js/jquery.js"></script>
 
 	<script type="text/javascript">
 	"use strict";
 
 		$(document).ready(function() {
-			alert("The DOM has finished loading!");
-
-			var contents = $("#second-sec").html();
-				alert(contents);
-
-			$(".codeup").css("border", "1px solid red");
-
-			$("li").css("font-size", "20px");
-
-			$("h1, p, li").css("background-color", "yellow");
-
-			var titleContent = $("h1").html();
-				alert(titleContent);
-
+			// alert("The DOM has finished loading!");
+			
+			// Turn background color salmon when clicked once.
+			$("h1").click(function() {
+				$(this).css("background-color", "salmon");
+			});
+			// Turns font size to 18px when double clicked.
+			$("p").dblclick(function() {
+				$(this).css("font-size", "18px");
+			});
+			// Turns red when mouse hovers over and returns to white when it's not.
+			$("li").hover(
+				function() {
+					$(this).css("background-color", "red");
+				},
+				function() {
+					$(this).css("background-color", "#FFF");
+				}
+			);
 		});
 
 	</script>
-
 
 </body>
 </html> 
