@@ -6,23 +6,28 @@
 	<meta charset="utf-8">
 
 	<style>
-		
-		img {
+		img, p {
 			display: none;
 		}
-	
+
+		p {
+			font-size: 2rem;
+			font-weight: bolder;
+			color: gold;
+		}
 	</style>
 
 </head>
 <body>
 
 	<h3>Enter code to retrieve lives!</h3>
+	<p>Dr. Ziodberg gives you 30 lives!</p>
 	<img src="img/zoidberg.jpg">
 
 	<!-- Use script bottom of the body -->
-	 <script src="/js/jquery.js"></script>
+	<script src="/js/jquery.js"></script>
 
-	 <script type="text/javascript">
+	<script type="text/javascript">
 	"use strict";
 
 	$(document).ready(function() {
@@ -36,11 +41,9 @@
 				console.log("on a roll");
 				konamiCode.shift();
 				console.log(konamiCode);
-				
-				// Works but not sure if it's correct.
 				if(event.keyCode === 13) {
-					alert("You have added 30 lives!");
-					$("img").css("display", "block");
+					$("img, p").css("display", "block");
+					$("h3").css("display", "none");
 				}
 			} else if(event.keyCode != konamiCode[0]) {
 				alert("Refresh the page. Keep trying, loser!");
@@ -50,7 +53,7 @@
 
 	});
 
-	// </script>
+	</script>
 
 </body>
 </html> 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>jQuery Faq</title>
+	<meta charset="utf-8">
+
+	<style>
+
+		.invisible {
+			display: none;
+		}
+
+	</style>
+
+
+</head>
+<body>
+
+	<dl>
+    	<dt>Denali</dt>
+ 			<dd class="invisible">Alaska est. 1917</dd>
+ 		<dt>Gates of the Arctic</dt>
+   			<dd class="invisible">Alaska est. 1980</dd>
+   		<dt>Glacier Bay</dt>
+   			<dd class="invisible">Alaska est. 1980</dd>
+   		<dt>Grand Canyon</dt>
+   			<dd class="invisible">Arizona est. 1919</dd>
+   		<dt>Hot Srpings</dt>
+   			<dd class="invisible">Arkanasas est. 1921</dd>
+   		<dt>Death Valley</dt>
+   			<dd class="invisible">California est. 1994</dd>
+   		<dt>Redwood</dt>
+   			<dd class="invisible">California est. 1968</dd>
+   		<dt>Yosemite</dt>
+   			<dd class="invisible">California est. 1890</dd>
+   		<dt>Rocky Mountain</dt>
+   			<dd class="invisible">Colorado est. 1915</dd>
+   		<dt>Yellowstone</dt>
+   			<dd class="invisible">Idaho est. 1872</dd>
+	</dl>
+
+	<a id="toggle-me" href="#">Click here to see</a>
+	
+	<script src="/js/jquery.js"></script>
+
+	<script>
+	"use strict";
+
+	$(document).ready(function() {
+		$("#toggle-me").click(function(event) {
+			event.preventDefault();
+			$("dd").toggleClass("invisible");
+		});
+	});
+
+	</script>
+
+</body>
+</html> 
