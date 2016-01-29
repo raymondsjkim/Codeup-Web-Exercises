@@ -41,6 +41,28 @@
 	</dl>
 
 	<a id="toggle-me" href="#">Click here to see</a>
+
+	<h3>Park 1</h3>
+		<ul class="invisible">
+			<li>yoyoyo</li>
+			<li>yoyoyo</li>
+			<li>yoyoyo</li>
+			<li>yoyoyo</li>
+		</ul>
+	<h3>Park 1</h3>
+		<ul class="invisible">
+			<li>yoyoyo</li>
+			<li>yoyoyo</li>
+			<li>yoyoyo</li>
+			<li>yoyoyo</li>
+		</ul>
+	<h3>Park 1</h3>
+		<ul class="invisible">
+			<li>yoyoyo</li>
+			<li>yoyoyo</li>
+			<li>yoyoyo</li>
+			<li>yoyoyo</li>
+		</ul>
 	
 	<script src="/js/jquery.js"></script>
 
@@ -52,6 +74,22 @@
 			event.preventDefault();
 			$("dd").toggleClass("invisible");
 		});
+
+		// $("li").each(function(index) {
+		// 	if(index % 4 == 0) {
+		// 		$(this).css("font-weight", "bold");
+		// 	}
+		// });
+
+		$("ul").each(function() {
+			$(this).children().first().css("font-weight", "bold");
+		});
+
+		// click any h3 and make li display none.
+		$("h3").click(function() {
+			$("ul").toggleClass("invisible");
+		});
+
 	});
 
 	</script>
