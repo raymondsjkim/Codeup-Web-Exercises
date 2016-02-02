@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Calculator</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			font-size: 14px;
+		}
+		.container {
+			display: inline-block;
+			width: 304px;
+			height: 275px;
+			position: relative;
+			top: 50px;
+			left: 100px;
+			border: 5px solid #A9A9A9;
+			border-radius: 5%;
+			padding-top: 10px;
+			background-color: #D3D3D3;
+		}
+		input {
+			height: 45px;
+			border-top: 4px solid #008080;
+			border-bottom: 1px solid #008080;
+			border-left: 2px solid #008080;
+			border-right: 2px solid #008080;
+			position: relative;
+			left: 15px;
+		}
+		button {
+			margin: 2px 1px 1px 0;
+			border: 2px solid #008080;
+			position: relative;
+			left: 15px;
+			border-radius: 10px;
+		}
+		.extend {
+			width: 100px;
+		}
+		.minimize {
+			width: 50px;
+		}
+		.btn-size {
+			width: 65.14px;
+			height: 50px;
+			font-size: 1rem;
+		}
+		.btn-calc {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			font-size: .8rem;
+		}
+		#left-operand,
+		#operator,
+		#right-operand {
+			font-size: 1rem;
+			text-align: center;
+		}
+		#init-state-clr {
+			color: #FFF;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		
+		<input type="text" id="left-operand" name="number" class="extend lft-input">
+		<input type="text" id="operator" name="number" class="minimize">
+		<input type="text" id="right-operand" name="number" class="extend rt-input">
+
+		<button id="one" class="btn-size">1</button>
+		<button id="two" class="btn-size">2</button>
+		<button id="three" class="btn-size">3</button>
+		<button id="addition" class="btn-size math">+</button>
+		<br>
+		<button id="four" class="btn-size">4</button>
+		<button id="five" class="btn-size">5</button>
+		<button id="six" class="btn-size">6</button>
+		<button id="subtraction" class="btn-size math">-</button>
+		<br>
+		<button id="seven" class="btn-size">7</button>
+		<button id="eight" class="btn-size">8</button>
+		<button id="nine" class="btn-size">9</button>
+		<button id="multiplication" class="btn-size math">*</button>
+		<br>
+		<button id="init-state-clr" class="btn-size">Clear</button>
+		<button id="zero" class="btn-size">0</button>
+		<button id="calculate" class="btn-size">=</button>
+		<button id="division" class="btn-size math">/</button>
+	
+	</div>
+	
+	<script src="/js/jquery.js"></script>
+	<script>
+	"use strict";
+	
+	$(document).ready(function() {
+		
+		var activeInput = $(".lft-input");
+		activeInput.val();
+
+		var num = "";
+		var numR = "";
+		var op;
+		
+		// Left-operand numbers
+		$("#one").click(function() {
+			num = num + 1;
+			activeInput.val(num);
+		});
+		$("#two").click(function() {
+			num = num + 2;
+			activeInput.val(num);
+		});
+		$("#three").click(function() {
+			num = num + 3;
+			activeInput.val(num);
+		});
+		$("#four").click(function() {
+			num = num + 4;
+			activeInput.val(num);
+		});
+		$("#five").click(function() {
+			num = num + 5;
+			activeInput.val(num);
+		});
+		$("#six").click(function() {
+			num = num + 6;
+			activeInput.val(num);
+		});
+		$("#seven").click(function() {
+			num = num + 7;
+			activeInput.val(num);
+		});
+		$("#eight").click(function() {
+			num = num + 8;
+			activeInput.val(num);
+		});
+		$("#nine").click(function() {
+			num = num + 9;
+			activeInput.val(num);
+		});
+		$("#zero").click(function() {
+			num = num + 0;
+			activeInput.val(num);
+		});
+
+		// After you click on an operator, the right-operand will be activated.
+		// The math is calculated in "each" operator function.
+		op = ["+", "-", "*", "/"];
+		
+		$("#addition").click(function() {
+			
+			$("#operator").val(op[0]);
+
+			activeInput = $("rt-input");
+			activeInput.val(numR);
+			
+			$("#one").click(function() {
+				numR = numR + 1;
+				$(".rt-input").val(numR);			
+			});
+			$("#two").click(function() {
+				numR = numR + 2;
+				$(".rt-input").val(numR);
+			});
+			$("#three").click(function() {
+				numR = numR + 3;
+				$(".rt-input").val(numR);
+			});
+			$("#four").click(function() {
+				numR = numR + 4;
+				$(".rt-input").val(numR);
+			});
+			$("#five").click(function() {
+				numR = numR + 5;
+				$(".rt-input").val(numR);
+			});
+			$("#six").click(function() {
+				numR = numR + 6;
+				$(".rt-input").val(numR);
+			});
+			$("#seven").click(function() {
+				numR = numR + 7;
+				$(".rt-input").val(numR);
+			});
+			$("#eight").click(function() {
+				numR = numR + 8;
+				$(".rt-input").val(numR);
+			});
+			$("#nine").click(function() {
+				numR = numR + 9;
+				$(".rt-input").val(numR);
+			});
+			$("#zero").click(function() {
+				numR = numR + 0;
+				$(".rt-input").val(numR);
+			});
+			
+			// Calculation for addition
+			$("#calculate").click(function() {
+				$("#right-operand").css("color", "#FFF");
+				$("#operator").css("color", "#FFF");
+					var activeInput = $(".lft-input");
+					activeInput.val(parseInt($(".lft-input")
+					.val()) + parseInt($(".rt-input").val()));
+			});
+		});
+		$("#subtraction").click(function() {
+			
+			$("#operator").val(op[1]);
+
+			activeInput = $("rt-input");
+			activeInput.val(numR);
+			
+			$("#one").click(function() {
+				numR = numR + 1;
+				$(".rt-input").val(numR);
+			});
+			$("#two").click(function() {
+				numR = numR + 2;
+				$(".rt-input").val(numR);
+			});
+			$("#three").click(function() {
+				numR = numR + 3;
+				$(".rt-input").val(numR);
+			});
+			$("#four").click(function() {
+				numR = numR + 4;
+				$(".rt-input").val(numR);
+			});
+			$("#five").click(function() {
+				numR = numR + 5;
+				$(".rt-input").val(numR);
+			});
+			$("#six").click(function() {
+				numR = numR + 6;
+				$(".rt-input").val(numR);
+			});
+			$("#seven").click(function() {
+				numR = numR + 7;
+				$(".rt-input").val(numR);
+			});
+			$("#eight").click(function() {
+				numR = numR + 8;
+				$(".rt-input").val(numR);
+			});
+			$("#nine").click(function() {
+				numR = numR + 9;
+				$(".rt-input").val(numR);
+			});
+			$("#zero").click(function() {
+				numR = numR + 0;
+				$(".rt-input").val(numR);
+			});
+			
+			// Calculation for subtraction
+			$("#calculate").click(function() {
+				$("#right-operand").css("color", "#FFF");
+				$("#operator").css("color", "#FFF");
+					var activeInput = $(".lft-input");
+					activeInput.val(parseInt($(".lft-input")
+					.val()) - parseInt($(".rt-input").val()));		
+			}); 
+		});
+		$("#multiplication").click(function() {
+			
+			$("#operator").val(op[2]);
+
+			activeInput = $("rt-input");
+			activeInput.val(numR);
+		
+			$("#one").click(function() {
+				numR = numR + 1;
+				$(".rt-input").val(numR);
+			});
+			$("#two").click(function() {
+				numR = numR + 2;
+				$(".rt-input").val(numR);
+			});
+			$("#three").click(function() {
+				numR = numR + 3;
+				$(".rt-input").val(numR);
+			});
+			$("#four").click(function() {
+				numR = numR + 4;
+				$(".rt-input").val(numR);
+			});
+			$("#five").click(function() {
+				numR = numR + 5;
+				$(".rt-input").val(numR);
+			});
+			$("#six").click(function() {
+				numR = numR + 6;
+				$(".rt-input").val(numR);
+			});
+			$("#seven").click(function() {
+				numR = numR + 7;
+				$(".rt-input").val(numR);
+			});
+			$("#eight").click(function() {
+				numR = numR + 8;
+				$(".rt-input").val(numR);
+			});
+			$("#nine").click(function() {
+				numR = numR + 9;
+				$(".rt-input").val(numR);
+			});
+			$("#zero").click(function() {
+				numR = numR + 0;
+				$(".rt-input").val(numR);
+			});
+			
+			// Calculation for multiplication
+			$("#calculate").click(function() {
+				$("#right-operand").css("color", "#FFF");
+				$("#operator").css("color", "#FFF");
+					var activeInput = $(".lft-input");
+					activeInput.val(parseInt($(".lft-input")
+					.val()) * parseInt($(".rt-input").val()));
+			});		 
+		});
+		$("#division").click(function() {
+			
+			$("#operator").val(op[3]);
+
+			activeInput = $("rt-input");
+			activeInput.val(numR);
+			
+			$("#one").click(function() {
+				numR = numR + 1;
+				$(".rt-input").val(numR);
+			});
+			$("#two").click(function() {
+				numR = numR + 2;
+				$(".rt-input").val(numR);
+			});
+			$("#three").click(function() {
+				numR = numR + 3;
+				$(".rt-input").val(numR);
+			});
+			$("#four").click(function() {
+				numR = numR + 4;
+				$(".rt-input").val(numR);
+			});
+			$("#five").click(function() {
+				numR = numR + 5;
+				$(".rt-input").val(numR);
+			});
+			$("#six").click(function() {
+				numR = numR + 6;
+				$(".rt-input").val(numR);
+			});
+			$("#seven").click(function() {
+				numR = numR + 7;
+				$(".rt-input").val(numR);
+			});
+			$("#eight").click(function() {
+				numR = numR + 8;
+				$(".rt-input").val(numR);
+			});
+			$("#nine").click(function() {
+				numR = numR + 9;
+				$(".rt-input").val(numR);
+			});
+			$("#zero").click(function() {
+				numR = numR + 0;
+				$(".rt-input").val(numR);
+			});
+			
+			// Calculation for division
+			$("#calculate").click(function() {
+				$("#right-operand").css("color", "#FFF");
+				$("#operator").css("color", "#FFF");
+					var activeInput = $(".lft-input");
+					activeInput.val(parseInt($(".lft-input")
+					.val()) / parseInt($(".rt-input").val()));
+			});		 
+		});
+	
+		// To Clear the inputs, click Clear to "refresh page"
+		$('#init-state-clr').click(function() {
+    		location.reload();
+		});
+	});
+
+	</script>
+
+</body>
+</html> 
