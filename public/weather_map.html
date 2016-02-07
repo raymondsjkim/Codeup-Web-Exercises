@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Open Weather Map API</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style type="text/css">
+	body {
+		background-color: #ABDCFD;
+	}
+	.inputs {
+		margin-left: 25px;
+		margin-bottom: 10px;
+	}
+	#each-day {
+		margin-left: 25px;
+	}
+	#day-condition {
+		border: 1px solid black;
+		display: inline-block;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+		background-color: #F2F2F2;
+	}
+	.temp-text {
+		font-size: 25px;
+	}
+
+	</style>
+
+</head>
+<body>
+	<div class="inputs">
+		<h1>Weather Application</h1>
+		<div id="city-name"></div>
+		<input type="text" id="lat" name="lat" placeholder="Latitude">
+		<input type="text" id="long" name="long" placeholder="Longitude">
+		<button id="find">Submit</button>
+	</div>
+	
+	<!-- Weather AJAX API Request -->
+	<div id="each-day">
+		<!-- appended in here -->
+	</div>
+
+<script src="/js/jquery.js"></script>
+
+<script>
+"use strict";
+$(document).ready(function() {
+
+	var currentLat = 29.423017;
+	var currentLong = -98.48527;
+
+	// Calling weatherMapApi function with coord
+	weatherMapApi(currentLat, currentLong);
+
+	//Weather map function
+	function weatherMapApi(lat, lon) {
+		$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+			"APPID": "399506ffe0d07ea9e1c7c69af4a51bb3",
+			"lat": lat,
+			"lon": lon,
+			"cnt": "3",
+			"units": "imperial"
+		})
+		.done(function(data) {
+			console.log(data);
+
+			// city name
+			var cityName = data.city.name;
+			$("#city-name").append("<h2>" + cityName + "</h2>");
+			
+			data.list.forEach(function(dayData) {
+				// Goes inside img src
+				var icon = dayData.weather[0].icon;
+				var date = dayData.dt;
+				
+				$("#each-day").append("<div id='day-condition'><p>" + new Date(date * 1000) + "</p><p class='temp-text'>" + dayData.temp.day + "&deg;</p>" + "<img src='http://openweathermap.org/img/w/" + icon + ".png'>" + "<p><strong>Clouds:</strong> " + dayData.weather[0].description + "</p><p><strong>Humidity:</strong> " + dayData.humidity + "</p><p><strong>Wind:</strong> " + dayData.speed + "</p><p><strong>Pressure:</strong> " + dayData.pressure + "</p></div>");		
+			});
+		});
+	}
+	
+	// Search Function for inputs.
+	// #find is a button.
+	$("#find").click(function() {
+		currentLat = $("#lat").val();
+		currentLong = $("#long").val();
+
+		// calling weatherMapApi with input coord
+		weatherMapApi(currentLat, currentLong);
+
+		$("#each-day").empty();	
+		$("#city-name").empty();
+	});
+	
+
+});
+
+
+</script>
+</body>
+</html>
