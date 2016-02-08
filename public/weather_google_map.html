@@ -41,6 +41,9 @@
 <body>
 	<div class="inputs">
 		<h1>Weather Application</h1>
+		<input type="text" id="lat" name="lat" placeholder="Latitude">
+		<input type="text" id="long" name="long" placeholder="Longitude">
+		<button id="find">Submit</button>
 		<div id="city-name"></div>
 	</div>
 	
@@ -59,6 +62,9 @@
 <script>
 "use strict";
 $(document).ready(function() {
+
+	var currentLat = 29.423017;
+	var currentLong = -98.48527;
 
 // Open Weather function
 function grabWeather(lat, lon) {
@@ -120,7 +126,7 @@ function grabWeather(lat, lon) {
     			draggable: true,
     			map: map
 			});
-		
+		// Drag marker for coord
 		google.maps.event.addListener(marker, 'dragend', function(event){
 			
 			var latMap = marker.getPosition().lat();
@@ -134,6 +140,18 @@ function grabWeather(lat, lon) {
 			$("#city-name").empty();
 		});
 
+		// Search coord inputs.
+		$("#find").click(function() {
+			currentLat = $("#lat").val();
+			currentLong = $("#long").val();
+
+			grabWeather(currentLat, currentLong);
+			
+			$("#each-day").empty();
+			$("#city-name").empty();
+
+		});
+	
 		//Re-center the map around the marker when window is resized
 		google.maps.event.addDomListener(window, 'resize', function() {
 		  map.setCenter(marker.getPosition());
