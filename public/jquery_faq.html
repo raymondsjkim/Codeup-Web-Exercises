@@ -72,7 +72,7 @@
 	$(document).ready(function() {
 		$("#toggle-me").click(function(event) {
 			event.preventDefault();
-			$("dd").toggleClass("invisible");
+			$("dd").slideToggle();
 		});
 
 		// $("li").each(function(index) {
@@ -87,7 +87,7 @@
 
 		// click any h3 and make li display none.
 		$("h3").click(function() {
-			$("ul").toggleClass("invisible");
+			$("ul").slideToggle();
 		});
 
 	});
