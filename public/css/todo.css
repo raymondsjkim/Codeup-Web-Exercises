@@ -1,0 +1,41 @@
+.container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+input {
+	height: 35px;
+}
+
+table {
+	position: relative;
+	top: 50px;
+}
+
+thead {
+	border-bottom: 3px solid #3C763D;
+}
+
+.font-michroma {
+	font-family: 'Michroma';
+}
+
+h1 {
+	position: relative;
+	left: 10%;
+}
+
+.img-style {
+	width: 50px;
+}
+
+.form-group {
+	width: 25%;
+	display: inline-block;
+	position: relative;
+	left: 10%;
+}
+
+.wtf {
+	margin-right: 50px;
+}
+

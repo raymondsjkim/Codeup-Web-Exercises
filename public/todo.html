@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do App</title>
+	<link rel="stylesheet" type="text/css" href="css/todo.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+	<!-- Google fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One|Michroma' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 class="font-michroma"><img class="img-style" src="img/plan.png"> My Daily Planner</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<form name="new-item">
+					<div class="form-group has-success">
+						<input class="form-control" type="text" id="content" placeholder="Item"></input>
+					</div>
+					<div class="form-group has-success">
+						<input class="form-control" type="text" id="priority" placeholder="Priority 0 - 9">
+					</div>
+					<div class="form-group has-success">
+						<input class="form-control" type="date" id="due_date" placeholder="Date"></input>
+					</div>
+					<div class="text-center wtf">
+						<button id="btn-new-item" class="btn btn-primary">Add to List</button>
+						<button id="btn-show-items" class="btn btn-primary toggle-me">Show List</button>
+						<button id="btn-hide-items" class="btn btn-primary">Hide List</button>
+					</div>
+				</form>
+				<table id="list" class="table table-striped">
+				    <thead>
+				        <tr>
+				            <th id="todo-click">TODO</th>
+				            <th id="priority-click">PRIORITY</th>
+				            <th id="date-made-click">DATE MADE</th>
+				            <th id="due-date-click">DUE DATE</th>
+				        </tr>
+				    </thead>
+				    <tbody id="show-list"></tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/todo.js"></script>
+<script src="js/moment.js"></script>
+</body>
+</html>
