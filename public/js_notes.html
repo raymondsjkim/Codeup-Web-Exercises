@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<!-- Mobile first -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eloquent JS Notes</title>
+</head>
+<body>
+	<script>
+	"use strict";
+
+		/* Concatanate */
+		console.log(null || "user" + " " + "karl" || "user"); 
+		// user karl
+		
+		/* Bolean */
+		console.log(3 > 2); // true
+		console.log("Z" < "z"); // true
+		
+		console.log(true ? 1 : 2); // 1
+		console.log(false ? 1 : 2); // 2
+
+		/* Automatic type conversion */
+		console.log(8 * null); // 0
+		console.log("5" - 1); // 4
+		console.log("5" + 1); // 51
+		console.log("five" * 2); // NaN
+		console.log(false == 0) // true
+
+		/* Precisely equal to */
+		console.log("0" === 0); // false
+
+		/* Variables */
+		var caught = 5 * 5;
+		console.log(caught);
+
+		var ten = 10;
+		console.log(ten * ten);
+
+		var mood = "light";
+		console.log(mood); // light
+		mood = "dark";
+		console.log(mood); // dark
+
+		var luigisDebt = 140;
+		luigisDebt = luigisDebt - 35;
+		console.log(luigisDebt); // 105
+
+		var one = 1, two = 2;
+		var three = one + two;
+		console.log(three); // 3
+
+		/* Calling Functions */
+		/* The Alert function */
+		alert("Hello"); // opens dialog box
+
+		/* The Console.log function */
+		var x = 30;
+		console.log("the value of x is", x);
+		// the value of x is 30
+
+		/* Return Values (finds max value) */
+		console.log(Math.max(2, 4, 1)); // 4
+		console.log(Math.min(2, 4) + 100); // 102
+
+		/* Promt and Confirm */
+		confirm("shall we, then?")
+		// console.log(confirm("shall we, then?"));
+		// returns a boolean: ok is true, cancel is false
+		
+		prompt("Tell me everything you know.");
+		// console.log(prompt("Tell me everything you know."));
+
+		/* Control Flow */
+		/*
+			Ask user for a number. (Number function converts a value to a number)
+			Show the square root of that number.
+		*/
+		var theNumber = Number(prompt("Pick a number", ""));
+		alert("Your number is the square root of " + theNumber * theNumber);
+
+	</script>
+
+</body>
+</html>
